@@ -9,7 +9,7 @@
   </div>
   <input type="submit" class="btn btn-primary">
 </form>
-
+<div id="map"></div>
 <div class="row">
   <div class="col-md-6">
     <h2>Places</h2>
@@ -27,4 +27,10 @@
 
 
 <!-- scripts -->
+<script>
+var markers = <%- JSON.stringify(places) %>;
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvrHTcuYbt_KLPpGAsssQL_XR3se1M8pQ&callback=initMap">
+</script>
 <script src="/js/script.js"></script>
